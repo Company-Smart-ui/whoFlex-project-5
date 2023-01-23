@@ -2,6 +2,7 @@
 @import "components/fonts";
 @import "components/menu";
 @import "components/footer";
+@import "components/swiper-bundle.css";
 
 
 input[type="password"] {
@@ -33,6 +34,9 @@ body {
 }
 body *{
 	box-sizing: border-box;
+}
+main{
+	height: 100px;
 }
 a{
 	text-decoration: none;
