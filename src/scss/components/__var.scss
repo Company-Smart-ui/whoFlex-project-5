@@ -1,0 +1,104 @@
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+
+
+
+@mixin sm {
+  @media (min-width:$sm) {
+    @content
+  }
+}; 
+@mixin md {
+  @media (min-width:$md) {
+    @content
+  }
+}; 
+@mixin lg {
+  @media (min-width:$lg) {
+    @content
+  }
+}; 
+@mixin xl {
+  @media (min-width:$xl) {
+    @content
+  }
+}; 
+@mixin xxl {
+  @media (min-width:$xxl) {
+    @content
+  }
+};
+  
+
+
+
+
+
+
+
+
+
+
+//правильно 
+//.hero{
+// &__title{
+//   font-size: 30px;
+//   @include md{
+//    font-size: 40px;
+//    background-color: rgb(224, 199, 199);
+//  }
+//  @include lg {
+//     font-size: 50px;
+//  }
+// }
+// &__content{
+//  padding: 10px;
+//   @include md {
+//    padding: 20px;
+//     border:solid black 1px;
+//     display: flex;
+//   }
+// }
+//}
+//правильно 
+
+
+// неправильно 
+//.hero {
+//  &__title{
+//    font-size: 50px;
+//    background-color: rgb(224, 199, 199);
+//  }
+//  &__content{
+//    padding: 20px;
+//    border:solid black 1px;
+//    display: flex;
+//  }
+//}
+//
+//@media (max-width:768px) {
+//.hero{
+//  &__title{
+//    font-size: 30px;
+//    background-color: transparent;
+//  }
+//  &__content{
+//   padding: 10px;
+//    border:none;
+//    display:block;
+//  }
+// }
+//}
+//@media (max-width:992px) {
+//.hero{
+//  &__title{
+//    font-size: 40px;
+//  }
+// }
+//}
+
+// неправильно 

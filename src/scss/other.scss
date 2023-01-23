@@ -1,0 +1,14 @@
+ 
+  @use 'sass:math';
+  //css for all parts in non visible scope on page loading
+
+  @import 'components/_var';
+   @import 'components/button';
+   @import 'components/card';
+   @import 'components/footer';
+   @import 'components/list';   
+
+
+@import 'modules/modules.scss';
+
+

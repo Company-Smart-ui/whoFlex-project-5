@@ -1,0 +1,101 @@
+.instagram {
+  padding: 55px 0 15px;
+  background-color: $blogColorBg1;
+  @include md {
+    padding: 75px 0 100px;
+  }
+  &__image{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    &__container{
+     height: 20px;
+     height: 0;
+     padding-bottom: 100%;
+     position: relative;
+    }
+   
+     img{ 
+      height: 100%;
+      width: 100%;
+      object-fit: cover; 
+     } 
+  }
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+  }
+
+  &__title {
+    padding-bottom: 20px;
+    font-size: 24px;
+    line-height: 100%;
+    margin: 0;
+    @include md {
+      font-size: 35px;
+      padding-bottom: 30px;
+    }
+  }
+
+  &__sub-title {
+    font-size: 18px;
+    line-height: 120%;
+    padding-bottom: 20px;
+    margin: 0;
+    width: 70%;
+    text-align: center;
+    opacity: 0.5;
+    @include md {
+      padding-bottom: 30px;
+    }
+  }
+
+  &__item {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    @include md {
+      width: 23%;
+    }
+  }
+
+  &__user-name {
+    font-size: 18px;
+    line-height: 120%;
+    margin: 0;
+    padding: 10px 0 30px;
+    @include md {
+      font-size: 25px;
+    }
+  }
+
+  &__icon-box {
+    display: flex;
+    padding-bottom: 35px;
+
+    svg {
+      fill: $clr-text-main;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__name-account {
+    color: $clr-text-main;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 120%;
+    padding-left: 15px;
+  }
+}
