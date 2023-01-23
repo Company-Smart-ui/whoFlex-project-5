@@ -1,0 +1,107 @@
+@import "components/var";
+@import "components/fonts";
+@import "components/menu";
+@import "components/footer";
+
+
+input[type="password"] {
+	transition: none;
+	line-height: 1rem;
+	font-family: $passFont;
+	font-size: 16px !important;
+	letter-spacing: 0.1em;
+}
+input{
+	transition: none !important;
+}
+input::placeholder{
+	font-family: $secondFont !important;
+	letter-spacing: normal;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: $mainFont;
+	font-size: 16px;
+	line-height: 23px;
+	min-height: 100vh;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+body *{
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+}
+a,
+button {
+	color: initial;
+	cursor: pointer;
+	border: none;
+	background: none;
+	padding: 0;
+	margin: 0;
+}
+p{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+img{
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+/* ######### Utility CSS ######### */
+.button{
+	border-radius: 100px;
+	background: #DDC160;
+	box-shadow: 0 12px 30px rgba(221, 193, 96, 0.12);
+	color: #ffffff;
+	text-align: center;
+	letter-spacing: -0.02em;
+	font-weight: 700;
+	font-size: 16px;
+	padding: 16px 24px;
+	display: inline-block;
+	transition: .3s;
+	@include l{
+		font-size: 20px;
+	}
+	@include xxl{
+		font-size: 22px;
+	}
+	&_white{
+		font-weight: 600;
+		color: #000000;
+		background: #FFFFFF;
+		box-shadow: 0 15px 60px rgba(0, 0, 0, 0.25);
+		@include l{
+			padding: 19px 35px;
+		}
+		@include xxl{
+			font-size: 24px;
+		}
+		&:hover{
+			background: #cbcbcb;
+		}
+	}
+}
+.d-block {
+	display: block !important;
+}
+.d-none {
+	display: none !important;
+}
+.d-flex {
+	display: flex;
+}

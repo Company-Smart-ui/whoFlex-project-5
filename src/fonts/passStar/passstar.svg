@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2022 by original authors @ fontello.com</metadata>
+<defs>
+<font id="passstar" horiz-adv-x="1000" >
+<font-face font-family="passstar" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="990" descent="-10" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="asterisk" unicode="&#x2022;" d="M66 520l47 162c109-42 187-79 237-110-13 137-20 232-21 283h149c-2-75-10-169-24-282 71 39 151 76 242 109l47-162c-86-31-171-53-255-63 42-41 101-112 177-216l-124-96c-39 60-86 141-140 244-51-107-95-188-133-244l-121 96c79 109 136 181 170 216-88 19-172 40-251 63z" horiz-adv-x="750" />
+</font>
+</defs>
+</svg>
