@@ -34,6 +34,89 @@
       transform: skewY(2.5deg);
     }
   }
+  &-second{
+    color: white !important;
+    background: #343434;
+    margin: 160px 20px 44px;
+    text-align: center;
+    border-radius: 15px;
+    @include md{
+      display: block;
+      margin: 220px 20px 100px;
+    }
+    @include xl{
+      max-width: 1150px;
+      margin: 300px auto 140px;
+      padding-bottom: 25px;
+    }
+    &::after {
+      top: -22px;
+      height: 80%;
+      background: #343434;
+      transform: skewY(-3deg);
+      border-radius: 15px 15px 0 0;
+      @include sm {
+        transform: skewY(-2deg);
+      }
+      @include md {
+        transform: skewY(-1.3deg);
+      }
+    }
+    &::before{
+      position: absolute;
+      z-index: -1;
+      content: "";
+      top: -40px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 85%;
+      height: 80%;
+      background: #ffffff;
+      transform: skewY(-3.2deg);
+      background: rgba(221, 193, 96, 0.5);
+      border-radius: 15px;
+      @include sm {
+        transform: skewY(-2deg);
+      }
+      @include md {
+        top: -50px;
+        width: 90%;
+        transform: skewY(-1.3deg);
+      }
+      @include xl{
+        top: -70px;
+      }
+    }
+    .review__img{
+      margin: 0 0 20px;
+      @include md{
+        margin-bottom: 0;
+      }
+      img {
+        margin-top: -100px;
+        max-width: 140px;
+        @include xl{
+          max-width: 100%;
+          margin-top: -180px;
+        }
+      }
+    }
+    .review__name{
+      color: white;
+      @include md{
+        margin-top: 17px;
+      }
+    }
+    .review__content{
+      width: 100%;
+      max-width: 980px;
+      margin: 0 auto;
+      @include md{
+        padding-top: 22px;
+      }
+    }
+  }
   &__img{
     margin-right: 30px;
     margin-bottom: 12px;
@@ -57,6 +140,7 @@
   &__content{
     font-size: 16px;
     line-height: 28px;
+    font-style: italic;
     @include md{
       width: calc(100% - 140px);
       font-size: 18px;

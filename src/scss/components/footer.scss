@@ -1,5 +1,5 @@
 .footer{
-  padding: 40px 20px 50px;
+  padding: 30px 0 50px;
   background: #343434;
   border-radius: 20px 20px 0 0;
   margin: 0 auto;
@@ -19,6 +19,7 @@
     margin-bottom: 44px;
     @include md{
       flex-direction: column;
+      margin-bottom: 0;
     }
     li{
       width: calc(50% - 10px);
@@ -37,7 +38,6 @@
     }
   }
   &__wrap{
-    border-bottom: 1px solid #FFFFFF;
     margin-bottom: 15px;
     @include md{
       display: flex;
@@ -62,9 +62,17 @@
     }
   }
   &__bottom{
+    border-top: 1px solid #FFFFFF;
+    padding: 10px 20px 0;
     @include md{
+      padding-top: 40px;
       display: flex;
       justify-content: space-between;
+    }
+    @include xl{
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 0 0;
     }
   }
   &__social{
@@ -99,10 +107,6 @@
         }
       }
     }
-  }
-  .container{
-    margin: 0 auto;
-    max-width: 1200px;
   }
   h3{
     font-weight: 700;

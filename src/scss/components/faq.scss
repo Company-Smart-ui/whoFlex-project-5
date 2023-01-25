@@ -1,0 +1,99 @@
+.faq{
+  margin-bottom: 70px;
+  @include lg{
+    margin-bottom: 100px;
+  }
+  @include xl{
+    margin-bottom: 130px;
+  }
+  &__title{
+    color: #262537;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 66px;
+    margin-bottom: 15px;
+    @include md{
+      font-size: 46px;
+      margin-bottom: 35px;
+    }
+    @include xl{
+      font-size: 64px;
+    }
+  }
+  &__wrap{
+    @include lg{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+  }
+  &__block{
+    margin-bottom: 30px;
+    background: #FFFFFF;
+    border: 0.457082px solid #DCDCDC;
+    box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 3.65666px;
+    padding: 20px 20px 25px;
+    @include lg{
+      width: calc(50% - 20px);
+      margin-bottom: 0;
+      display: flex;
+      gap: 17px;
+      padding-top: 25px;
+      padding-left: 21px;
+    }
+    &:last-child{
+      margin-bottom: 0;
+      @include lg{
+        width: 100%;
+      }
+    }
+  }
+  &__number{
+    font-weight: 700;
+    font-size: 16.455px;
+    line-height: 27px;
+    background-color: $secondAccent;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__question{
+    color: #262537;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 29px;
+    margin-bottom: 10px;
+    @include md{
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    @include xl{
+      font-size: 24px;
+    }
+  }
+  &__answer{
+    color: #474648;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    @include md{
+      font-size: 15px;
+    }
+    @include xl{
+      font-size: 17px;
+      line-height: 29px;
+    }
+  }
+  &__content{
+    @include lg{
+      width: calc(100% - 57px);
+    }
+  }
+}

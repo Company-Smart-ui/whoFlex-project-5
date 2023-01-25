@@ -6,6 +6,7 @@
 @import "components/hero";
 @import "components/review";
 @import "components/why-whoflex";
+@import "components/faq";
 
 
 input[type="password"] {
@@ -70,7 +71,7 @@ img{
 .container{
 	margin: 0 auto;
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1240px;
 	padding: 0 20px;
 }
 .button{
@@ -87,9 +88,14 @@ img{
 	transition: .3s;
 	@include l{
 		font-size: 20px;
+		padding: 26px 40px;
 	}
 	@include xxl{
 		font-size: 22px;
+		padding: 30px 75px;
+	}
+	&:hover{
+		background: black;
 	}
 	&_white{
 		font-weight: 600;
