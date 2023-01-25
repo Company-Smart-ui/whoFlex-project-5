@@ -3,6 +3,9 @@
 @import "components/menu";
 @import "components/footer";
 @import "components/swiper-bundle.css";
+@import "components/hero";
+@import "components/review";
+@import "components/why-whoflex";
 
 
 input[type="password"] {
@@ -26,6 +29,7 @@ body {
 	box-sizing: border-box;
 	font-family: $mainFont;
 	font-size: 16px;
+	color: $fontColor;
 	line-height: 23px;
 	min-height: 100vh;
 	display: flex;
@@ -34,9 +38,6 @@ body {
 }
 body *{
 	box-sizing: border-box;
-}
-main{
-	height: 100px;
 }
 a{
 	text-decoration: none;
@@ -50,7 +51,7 @@ button {
 	padding: 0;
 	margin: 0;
 }
-p{
+p, h1, h2, h3{
 	margin: 0;
 	padding: 0;
 }
@@ -66,9 +67,15 @@ img{
 }
 
 /* ######### Utility CSS ######### */
+.container{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1200px;
+	padding: 0 20px;
+}
 .button{
 	border-radius: 100px;
-	background: #DDC160;
+	background: $secondAccent;
 	box-shadow: 0 12px 30px rgba(221, 193, 96, 0.12);
 	color: #ffffff;
 	text-align: center;

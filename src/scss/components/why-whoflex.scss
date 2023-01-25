@@ -1,0 +1,71 @@
+.why-whoflex{
+  background: #FAFBFA;
+  padding: 55px 20px 47px;
+  @include md{
+    background: #F8F8F8;
+    padding: 77px 20px 53px;
+  }
+  @include xxl{
+    border-radius: 30px;
+    max-width: 1380px;
+    margin: 0 auto;
+    padding: 77px 60px 53px;
+  }
+  &__title{
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 33px;
+    @include md{
+      font-size: 64px;
+      line-height: 92px;
+      margin-bottom: 10px;
+    }
+  }
+  &__block{
+    background: linear-gradient(90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%);
+    border-radius: 20px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+    @include md{
+      display: flex;
+      align-items: center;
+    }
+    &:nth-child(even){
+      background: linear-gradient(-90deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 50%);
+      @include md{
+        flex-direction: row-reverse;
+      }
+    }
+  }
+  &__block-img{
+    width: 40%;
+    margin: 0 auto 33px;
+    @include md{
+
+    }
+  }
+  &__block-content{
+    @include md{
+      width: 60%;
+    }
+    h3{
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 38px;
+      margin-bottom: 10px;
+      @include md{
+        margin-bottom: 15px;
+        font-size: 34px;
+        line-height: 46px;
+      }
+      @include md{
+        margin-bottom: 18px;
+        font-size: 40px;
+        line-height: 52px;
+      }
+    }
+  }
+}
