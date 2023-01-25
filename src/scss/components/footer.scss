@@ -12,6 +12,76 @@
   @include xxl{
     padding-top: 90px;
   }
+  &-main{
+    background: #000000;
+    padding: 58px 0 38px;
+    border-radius: 0;
+    max-width: none;
+    font-family: $secondFont !important;
+    h3{
+      font-size: 16px !important;
+      line-height: 20px !important;
+      border-bottom: none !important;
+    }
+    .footer__list{
+      gap: 20px;
+      li{
+        font-size: 14px;
+        @include l{
+          font-size: 13px;
+          line-height: 18px;
+        }
+      }
+    }
+    .footer__wrap{
+      margin-bottom: 10px;
+    }
+    .footer__bottom{
+      border: none;
+      padding: 0;
+      justify-content: flex-end;
+    }
+    .footer__social{
+      gap: 4px;
+      min-width: 208px;
+      svg{
+        transform: none;
+      }
+      a{
+        width: 30px;
+        height: 30px;
+        background: #1D1D1D;
+        border: none;
+      }
+    }
+    .footer__app-wrap{
+      gap: 13px;
+      a{
+        color: #ffffff;
+        display: flex;
+        padding: 12px 16px;
+        background: rgba(58, 58, 58, 0.5);
+        border-radius: 5px;
+        width: 208px;
+        height: 56px;
+        font-family: $secondFont;
+      }
+      p{
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+      }
+      h4{
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 18px;
+        margin: 0;
+      }
+      svg{
+        margin-right: 13px;
+      }
+    }
+  }
   &__list{
     display: flex;
     flex-wrap: wrap;
