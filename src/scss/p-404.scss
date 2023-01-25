@@ -1,0 +1,36 @@
+@import "src/scss/components/var";
+.p-404{
+  text-align: center;
+  padding: 0 32px;
+  font-family: $secondFont;
+  font-weight: 400;
+  margin: 30px 0 80px;
+  @include l{
+    margin: 42px 0 60px;
+  }
+  h1{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: -20px;
+    margin-bottom: 14px;
+    @include l{
+      font-size: 34px;
+      margin-bottom: 25px;
+    }
+  }
+  p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 417px;
+    margin: 0 auto 25px;
+    padding: 0 6px;
+    @include l{
+      margin-bottom: 27px;
+      font-size: 19px;
+      line-height: 27px;
+      padding: 0;
+    }
+  }
+}

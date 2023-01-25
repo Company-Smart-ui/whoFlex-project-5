@@ -1,0 +1,21 @@
+.header-logo{
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  &__wrap{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    max-width: 110px;
+    @include md{
+      left: 40px;
+      top: 40px;
+      max-width: 127px;
+    }
+    @include l{
+      top: 45px;
+      left: 64px;
+    }
+  }
+}

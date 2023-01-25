@@ -7,6 +7,7 @@
 @import "components/review";
 @import "components/why-whoflex";
 @import "components/faq";
+@import "components/header-logo";
 
 
 input[type="password"] {
@@ -96,6 +97,21 @@ img{
 	}
 	&:hover{
 		background: black;
+	}
+	&__second{
+		font-size: 16px;
+		line-height: 37px;
+		border-radius: 5px;
+		min-width: 185px;
+		padding: 6px 35px 9px;
+		@include l{
+			font-size: 18px;
+			padding: 6px 35px 9px;
+		}
+		@include xxl{
+			font-size: 18px;
+			padding: 8px 35px 7px;
+		}
 	}
 	&_white{
 		font-weight: 600;
