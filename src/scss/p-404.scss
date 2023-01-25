@@ -5,6 +5,7 @@
   font-family: $secondFont;
   font-weight: 400;
   margin: 30px 0 80px;
+  color: #000000;
   @include l{
     margin: 42px 0 60px;
   }
@@ -26,11 +27,13 @@
     max-width: 417px;
     margin: 0 auto 25px;
     padding: 0 6px;
+    color: #333333;
     @include l{
       margin-bottom: 27px;
       font-size: 19px;
       line-height: 27px;
       padding: 0;
+      color: #000000;
     }
   }
 }
