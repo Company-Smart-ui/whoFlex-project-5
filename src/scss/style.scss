@@ -8,6 +8,7 @@
 @import "components/why-whoflex";
 @import "components/faq";
 @import "components/header-logo";
+@import "components/form";
 
 
 input[type="password"] {
@@ -127,6 +128,16 @@ img{
 		&:hover{
 			background: #cbcbcb;
 		}
+	}
+}
+.link{
+	color: #E0C363;
+	text-decoration: underline;
+	font-weight: 700;
+	font-size: 14px;
+	transition: .3s;
+	&:hover{
+		text-decoration: none;
 	}
 }
 .d-block {

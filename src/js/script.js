@@ -173,7 +173,7 @@ function showPassFunction() {
     const showPass = document.querySelectorAll(".showPass");
     showPass.forEach(item => {
         item.classList.add('d-none');
-        const wrapPa = item.closest('.whoflex-input__wrap');
+        const wrapPa = item.closest('.form__group');
         const input = wrapPa.querySelector('input');
 
         input.addEventListener('keyup', function(){
@@ -198,6 +198,39 @@ function showPassFunction() {
     })
 };
 showPassFunction();
+
+function openLogin(){
+    const openBtn = document.querySelector('.inst-login__open');
+    const modalLogin = document.querySelector('.inst-login__wrapper');
+    openBtn.addEventListener('click', function (){
+        modalLogin.classList.add('open');
+    })
+}openLogin();
+
+function closeModal(){
+    const closeBtn = document.querySelectorAll('.close-btn');
+    const modal = document.querySelector('.modal');
+    const wrapModal = document.querySelector('.wrap-modal');
+    const openBtn = document.querySelector('.inst-login__open');
+
+    closeBtn.forEach(btn => {
+        btn.addEventListener('click', function (){
+            btn.closest('.wrap-modal').classList.remove('open');
+        })
+    })
+    // document.addEventListener( 'click', (e) => {
+    //     const withinModal = e.composedPath().includes(modal);
+    //     const withinOpenBtn = e.composedPath().includes(openBtn);
+    //     if (  ! withinOpenBtn  && ! withinModal) {
+    //         wrapModal.classList.remove('open')
+    //     }
+    // })
+}closeModal();
+
+
+
+
+
 
 
 @@include('components/openMenu.js');

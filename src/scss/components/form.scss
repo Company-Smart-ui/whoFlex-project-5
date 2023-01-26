@@ -1,0 +1,177 @@
+.form{
+  font-family: $secondFont;
+  position: relative;
+  form{
+    max-width: 390px;
+  }
+  &__info{
+    margin-bottom: 27px;
+  }
+  &__title{
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 36px;
+    margin-bottom: 13px;
+    color: black;
+    @include md{
+      font-size: 34px;
+      line-height: 41px;
+      margin-bottom: 10px;
+    }
+  }
+  &__group{
+    margin-bottom: 16px;
+    color: black;
+    position: relative;
+    .showPass{
+      position: absolute;
+      content: "";
+      color: #E0C463;
+      font-weight: 400;
+      font-size: 13px;
+      top: 37px;
+      right: 15px;
+      cursor: pointer;
+      display: block;
+      &:hover{
+        font-weight: bold;
+      }
+    }
+  }
+  &__label{
+    font-size: 16px;
+    margin-bottom: 8px;
+    display: block;
+    @include md{
+      font-size: 15px;
+      margin-bottom: 5px;
+    }
+  }
+  &__input{
+    border: 1px solid #DDDDDD;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    height: 47px;
+    padding: 0 15px;
+    font-size: 14px;
+    &[type=password]{
+      font-size: 12px !important;
+    }
+    @include md{
+      height: 40px;
+    }
+    &:focus, &:focus-visible{
+      border: 1px solid #E0C463;
+    }
+  }
+  &__button-text{
+    font-size: 14px;
+  }
+  .button__second{
+    width: 100%;
+  }
+  .close-btn{
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    @include sm{
+      top: 20px;
+      right: 20px;
+    }
+    &:hover{
+      path{
+        filter: drop-shadow(3px 0 3px #797979);
+      }
+    }
+    path{
+      transition: .3s;
+    }
+  }
+}
+
+.inst-login{
+  background: #FFFFFF;
+  border-radius: 10px;
+  max-height: 641px;
+  overflow: hidden;
+  display: flex;
+  &__wrapper{
+    padding: 0 20px;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 1;
+    max-width: 550px;
+    display: none;
+
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    right: 0;
+    @include md{
+      max-width: 1200px;
+    }
+    &.open{
+      display: flex;
+    }
+    &::after{
+      position: fixed;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background-color: black;
+    }
+  }
+  &__wrap-img{
+    display: none;
+    @include md{
+      display: block;
+      width: 50%;
+    }
+    img{
+      height: 100%;
+    }
+  }
+  &__content{
+    padding: 35px 16px;
+    @include xs{
+      padding: 40px 20px;
+    }
+    @include sm{
+      padding: 66px 57px;
+    }
+    @include md{
+      width: 60%;
+      padding: 45px 35px;
+    }
+    @include l{
+      width: 50%;
+    }
+    @include xl{
+      padding: 66px 57px;
+    }
+  }
+  .form__title{
+    @include md{
+      font-weight: 700;
+    }
+  }
+  .button{
+    margin-bottom: 20px;
+  }
+  .forgotPassBnt{
+    display: block;
+    margin-left: auto;
+  }
+  form{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 25px;
+  }
+}

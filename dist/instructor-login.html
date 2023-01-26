@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who flex</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body>
+<main>
+    <button class="inst-login__open button__second button">Instructor login</button>
+    <div class="wrap-modal inst-login__wrapper">
+        <div class="modal form inst-login">
+            <button class="close-btn">
+                <svg width="39" height="37" viewBox="0 0 39 37" fill="none">
+                    <path d="M28.875 9.05212L9.625 27.1563" stroke="#797979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.625 9.05212L28.875 27.1563" stroke="#797979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="inst-login__wrap-img">
+                <img src="./images/instructor-login.jpeg" alt="instructor-login">
+            </div>
+            <div class="inst-login__content">
+                <h2 class="form__title">Welcome to Whoflex Instructor Console</h2>
+                <p class="form__info">Welcome back. Please sign in to continue to your account.</p>
+                <form>
+                    <div class="form__group">
+                        <label class="form__label" for="instrLoginEmail">Email</label>
+                        <input class="form__input" type="email" id="instrLoginEmail" required>
+                    </div>
+                    <div class="form__group">
+                        <label class="form__label" for="instrLoginPassword">Password</label>
+                        <input class="form__input" type="password" id="instrLoginPassword" required>
+                        <span class="showPass">Show</span>
+                    </div>
+                    <button class="button button__second" type="submit">SIGN IN</button>
+                    <button class="link forgotPassBnt">Forgot password?</button>
+                </form>
+                <p class="form__button-text">Interested in becoming a Whoflex Instructor? <a href="#" class="link">Apply here</a></p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer></footer>
+
+<script src="js/script.js"></script>
+</body>
+
+</html>
