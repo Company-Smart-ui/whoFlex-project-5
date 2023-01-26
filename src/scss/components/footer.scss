@@ -14,27 +14,104 @@
   }
   &-main{
     background: #000000;
-    padding: 58px 0 38px;
+    padding: 35px 0 38px;
     border-radius: 0;
     max-width: none;
     font-family: $secondFont !important;
+    @include md{
+      padding: 58px 0 38px;
+    }
     h3{
-      font-size: 16px !important;
-      line-height: 20px !important;
-      border-bottom: none !important;
+      display: none;
+      @include md{
+        font-size: 16px !important;
+        line-height: 20px !important;
+        border-bottom: none !important;
+        display: block;
+      }
     }
     .footer__list{
-      gap: 20px;
+      margin: 0 auto;
+      justify-content: center;
+      max-width: 400px;
+      @include md{
+        max-width: none;
+        justify-content: flex-start;
+        gap: 20px;
+      }
       li{
+        width: auto;
         font-size: 14px;
-        @include l{
+        position: relative;
+        @include md{
           font-size: 13px;
           line-height: 18px;
+        }
+        &:last-child{
+          &::after{
+            content: none;
+          }
+        }
+        &:nth-child(3){
+          &::after{
+            content: none;
+          }
+        }
+        &::after{
+          @include xs{
+            position: absolute;
+            content: "";
+            background: #737373;
+            width: 1px;
+            height: 14px;
+            top: 4px;
+            right: -10px;
+          }
+          @include md{
+            content: none;
+          }
+        }
+      }
+      a{
+        color: #E9E9E9;
+        @include md{
+          color: #ffffff;
         }
       }
     }
     .footer__wrap{
-      margin-bottom: 10px;
+      margin-bottom: 20px;
+      gap: 10px;
+      display: flex;
+      flex-direction: column-reverse;
+      @include md{
+        margin-bottom: 10px;
+        flex-direction: row;
+        gap: 30px;
+      }
+    }
+    .footer__app{
+      display: none;
+      @include md{
+        display: block;
+      }
+    }
+    .footer__wrap-list{
+      &:nth-child(2){
+        display: none;
+        @include md{
+          display: block;
+        }
+      }
+    }
+    .footer__copyright{
+      text-align: center;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 27px;
+      @include md{
+        text-align: left;
+      }
     }
     .footer__bottom{
       border: none;
@@ -44,6 +121,10 @@
     .footer__social{
       gap: 4px;
       min-width: 208px;
+      justify-content: center;
+      @include md{
+        justify-content: flex-start;
+      }
       svg{
         transform: none;
       }
@@ -52,6 +133,22 @@
         height: 30px;
         background: #1D1D1D;
         border: none;
+      }
+    }
+    .logo-footer{
+      max-width: none;
+      margin: 0;
+      @include md{
+        margin-top: 8%;
+      }
+      a{
+        display: none;
+        @include md{
+          display: block;
+        }
+      }
+      img{
+        max-width: 160px;
       }
     }
     .footer__app-wrap{
@@ -82,6 +179,8 @@
       }
     }
   }
+
+
   &__list{
     display: flex;
     flex-wrap: wrap;
