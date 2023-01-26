@@ -202,9 +202,11 @@ showPassFunction();
 function openLogin(){
     const openBtn = document.querySelector('.inst-login__open');
     const modalLogin = document.querySelector('.inst-login__wrapper');
-    openBtn.addEventListener('click', function (){
-        modalLogin.classList.add('open');
-    })
+    if(openBtn && modalLogin){
+        openBtn.addEventListener('click', function (){
+            modalLogin.classList.add('open');
+        })
+    }
 }openLogin();
 
 function closeModal(){
