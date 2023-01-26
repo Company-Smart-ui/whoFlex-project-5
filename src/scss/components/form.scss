@@ -157,6 +157,12 @@
       padding: 66px 57px;
     }
   }
+  &__wrap-form{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #DDDDDD;
+    margin-bottom: 25px;
+    max-width: 390px;
+  }
   .form__title{
     @include md{
       font-weight: 700;
@@ -168,10 +174,5 @@
   .forgotPassBnt{
     display: block;
     margin-left: auto;
-  }
-  form{
-    padding-bottom: 30px;
-    border-bottom: 1px solid #DDDDDD;
-    margin-bottom: 25px;
   }
 }
