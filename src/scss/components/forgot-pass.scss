@@ -3,6 +3,13 @@
     min-height: 100vh;
     background: #FFFFFF;
     display: none;
+
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
     @include sm{
       background: transparent;
       min-height: auto;
@@ -31,7 +38,7 @@
       }
     }
     &.open{
-      display: block;
+      display: flex;
     }
     .link{
       font-size: 15px;
