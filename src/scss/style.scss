@@ -104,16 +104,16 @@ main{
 	}
 	&__second{
 		font-size: 16px;
-		line-height: 37px;
 		border-radius: 5px;
 		min-width: 185px;
-		padding: 6px 35px 9px;
+		padding: 9px 35px;
 		text-transform: uppercase;
-		height: 48px;
+		min-height: 48px;
 
 		@include l{
+			min-height: 52px;
 			font-size: 18px;
-			padding: 6px 35px 9px;
+			padding: 9px 35px;
 		}
 		@include xxl{
 			font-size: 18px;

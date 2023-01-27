@@ -19,6 +19,14 @@
 
   &__wrap-img{
     margin-bottom: 18px;
+    img{
+      @include sm{
+        max-width: 450px;
+      }
+      @include xl{
+        max-width: 650px;
+      }
+    }
   }
   h1{
     font-weight: 700;
@@ -43,5 +51,12 @@
   }
   .button{
     min-width: 200px;
+  }
+  .button__second{
+    padding-top: 13px;
+    @include l{
+      min-height: 58px;
+      padding-top: 16px;
+    }
   }
 }

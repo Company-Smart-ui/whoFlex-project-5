@@ -37,6 +37,10 @@
     }
   }
   .button__second{
-
+    padding-top: 13px;
+    @include l{
+      min-height: 58px;
+      padding-top: 18px;
+    }
   }
 }
