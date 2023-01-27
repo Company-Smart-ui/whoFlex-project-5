@@ -105,6 +105,7 @@ img{
 		border-radius: 5px;
 		min-width: 185px;
 		padding: 6px 35px 9px;
+		text-transform: uppercase;
 		@include l{
 			font-size: 18px;
 			padding: 6px 35px 9px;
@@ -148,4 +149,14 @@ img{
 }
 .d-flex {
 	display: flex;
+}
+.bg-light{
+	background: #F5F5F5;
+	min-height: 615px;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+	-webkit-box-shadow: 0 0 0 30px white inset !important;
 }

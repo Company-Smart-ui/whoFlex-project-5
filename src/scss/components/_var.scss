@@ -9,6 +9,7 @@ $secondFont: 'Arial', sans-serif;
 $passFont: "passstar", sans-serif;;
 
 $xs: 375px;
+$s: 420px;
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
@@ -18,6 +19,11 @@ $xxl: 1400px;
 $xxxl: 1920px;
 @mixin xs {
   @media (min-width:$xs) {
+    @content
+  }
+};
+@mixin s {
+  @media (min-width:$s) {
     @content
   }
 };

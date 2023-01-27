@@ -1,0 +1,143 @@
+.forgot-pass{
+  &__wrapper{
+    min-height: 100vh;
+    background: #FFFFFF;
+    display: none;
+    @include sm{
+      background: transparent;
+      min-height: auto;
+
+      &.fixed{
+        position: fixed;
+        z-index: 1;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+        top: 0;
+        right: 0;
+        &::after{
+          position: fixed;
+          content: "";
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          z-index: -1;
+          background-color: rgb(51 56 62 / 80%);;
+        }
+      }
+    }
+    &.open{
+      display: block;
+    }
+    .link{
+      font-size: 15px;
+    }
+    .close-btn{
+      @include sm{
+        top: 10px;
+        right: 10px;
+      }
+    }
+    .button__second{
+      @include md{
+        font-size: 15px;
+        text-transform: capitalize;
+     }
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      .button__second{
+        order: 1;
+        @include sm{
+          order: 0;
+        }
+      }
+    }
+  }
+  &__modal{
+    max-width: 458px;
+    width: 100%;
+    margin: 0 auto;
+    background: #FFFFFF;
+    border-radius: 10px;
+    padding: 40px 16px;
+    @include s{
+      padding: 40px 34px;
+    }
+    @include sm{
+      margin: 40px auto;
+      padding: 30px 34px;
+    }
+    @include l{
+      margin: 65px auto;
+    }
+  }
+  &__wrap-img{
+    max-width: 233px;
+    margin: 0 auto -10px;
+    @include sm{
+      max-width: 272px;
+      margin-bottom: -60px;
+    }
+  }
+}
+.backBtn{
+  color: black;
+  text-align: center;
+  margin-top: 28px;
+  a, button{
+    font-size: 16px;
+  }
+  &:hover{
+    a, button{
+      text-decoration: underline;
+    }
+  }
+}
+.check-email{
+  text-decoration: underline;
+  margin-right: 16px;
+}
+.resend-code{
+  margin-bottom: 24px;
+  text-align: left;
+  display: none;
+  @include sm{
+    display: inline-block;
+  }
+}
+.access-email{
+  display: none;
+  @include sm{
+    display: inline-block;
+  }
+}
+.mobile{
+  @include sm{
+    display: none;
+  }
+}
+.tablet{
+  display: none;
+  @include sm{
+    display: block;
+  }
+}
+.modal-res-pass{
+  .button__second{
+    margin-top: 10px;
+    @include sm{
+      margin-top: 4px;
+    }
+  }
+}
+.modal-complete{
+  .button__second{
+    text-transform: capitalize;
+  }
+}

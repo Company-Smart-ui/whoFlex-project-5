@@ -7,6 +7,14 @@
   &__info{
     margin-bottom: 27px;
   }
+  &__info-second{
+    color: #999999;
+    margin-bottom: 27px;
+    @include sm{
+      font-size: 15px;
+      margin: 20px 0 10px;
+    }
+  }
   &__title{
     font-size: 26px;
     font-weight: 400;
@@ -17,6 +25,35 @@
       font-size: 34px;
       line-height: 41px;
       margin-bottom: 10px;
+    }
+    &_second{
+      @include md{
+        font-size: 29px;
+      }
+    }
+  }
+  &__wrap-inputs{
+    display: flex;
+    gap: 11px;
+    margin-bottom: 15px;
+    @include sm{
+      margin-bottom: 10px;
+      gap: 15px;
+    }
+    input{
+      border: 1px solid #E0C463;
+      border-radius: 5px;
+      outline: none;
+      width: 100%;
+      height: 54px;
+      padding: 0 15px;
+      font-size: 14px;
+      text-align: center;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
     }
   }
   &__group{
@@ -90,90 +127,5 @@
   }
 }
 
-.inst-login{
-  background: #FFFFFF;
-  border-radius: 10px;
-  max-height: 641px;
-  overflow: hidden;
-  display: flex;
-  &__wrapper{
-    padding: 0 20px;
-    margin: 0 auto;
-    position: fixed;
-    z-index: 1;
-    max-width: 550px;
-    display: none;
-
-    height: 100vh;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    left: 0;
-    top: 0;
-    right: 0;
-    @include md{
-      max-width: 1200px;
-    }
-    &.open{
-      display: flex;
-    }
-    &::after{
-      position: fixed;
-      content: "";
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      z-index: -1;
-      background-color: black;
-    }
-  }
-  &__wrap-img{
-    display: none;
-    @include md{
-      display: block;
-      width: 50%;
-    }
-    img{
-      height: 100%;
-    }
-  }
-  &__content{
-    padding: 35px 16px;
-    @include xs{
-      padding: 40px 20px;
-    }
-    @include sm{
-      padding: 66px 57px;
-    }
-    @include md{
-      width: 60%;
-      padding: 45px 35px;
-    }
-    @include l{
-      width: 50%;
-    }
-    @include xl{
-      padding: 66px 57px;
-    }
-  }
-  &__wrap-form{
-    padding-bottom: 30px;
-    border-bottom: 1px solid #DDDDDD;
-    margin-bottom: 25px;
-    max-width: 390px;
-  }
-  .form__title{
-    @include md{
-      font-weight: 700;
-    }
-  }
-  .button{
-    margin-bottom: 20px;
-  }
-  .forgotPassBnt{
-    display: block;
-    margin-left: auto;
-    text-align: end;
-  }
-}
+@import "./inst-login";
+@import "./forgot-pass";
