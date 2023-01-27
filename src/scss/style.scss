@@ -109,6 +109,8 @@ main{
 		min-width: 185px;
 		padding: 6px 35px 9px;
 		text-transform: uppercase;
+		height: 48px;
+
 		@include l{
 			font-size: 18px;
 			padding: 6px 35px 9px;

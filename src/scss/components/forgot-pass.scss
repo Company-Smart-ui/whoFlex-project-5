@@ -4,15 +4,15 @@
     background: #FFFFFF;
     display: none;
 
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    top: 0;
     @include sm{
       background: transparent;
       min-height: auto;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      top: 0;
 
       &.fixed{
         position: fixed;
