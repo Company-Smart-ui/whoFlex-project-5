@@ -11,7 +11,7 @@ const signUpSocialButtons = document.getElementById("signUpSocialButtons");
 const signUpBackButton = document.getElementById("signUpBackButton");
 const errorMessage = document.getElementById("error-message");
 const email = document.getElementById('email');
-const signinEmail = document.getElementById('signinEmail');
+const signinEmail = document.getElementById('instrLoginEmail');
 const signupEmail = document.getElementById('signupEmail');
 const signinErrorMessage = document.getElementById('signin-error-message');
 const signupErrorMessage = document.getElementById('signup-error-message');
@@ -123,6 +123,7 @@ function checkSignUpEmailValidation() {
     }
 };
 function checkSignInEmailValidation() {
+    const filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     if (!filter.test(signinEmail.value)) {
         signinErrorMessage.style.display = "block";
         signinEmail.style.border = "1px solid #ea4335";

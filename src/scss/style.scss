@@ -175,3 +175,9 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active{
 	-webkit-box-shadow: 0 0 0 30px white inset !important;
 }
+.error-message{
+	color: #ea4335;
+	font-weight: 400;
+	font-size: 14px;
+	margin-top: 8px;
+}

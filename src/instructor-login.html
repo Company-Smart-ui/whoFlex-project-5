@@ -33,7 +33,8 @@
                     <form>
                         <div class="form__group">
                             <label class="form__label" for="instrLoginEmail">Email</label>
-                            <input class="form__input" type="email" id="instrLoginEmail" required>
+                            <input class="form__input" type="email" id="instrLoginEmail" onchange="checkSignInEmailValidation()" required>
+                            <span class="error-message" id="signin-error-message">Please enter a valid email</span>
                         </div>
                         <div class="form__group">
                             <label class="form__label" for="instrLoginPassword">Password</label>
