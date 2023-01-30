@@ -1,6 +1,7 @@
 @import "components/var";
 @import "components/fonts";
 @import "components/menu";
+@import "components/notification";
 @import "components/footer";
 @import "components/swiper-bundle.css";
 @import "components/hero";
@@ -144,12 +145,12 @@ main{
 }
 .link{
 	color: #E0C363;
-	text-decoration: underline;
+	text-decoration: none;
 	font-weight: 700;
 	font-size: 14px;
 	transition: .3s;
 	&:hover{
-		text-decoration: none;
+		text-decoration: underline;
 	}
 }
 .d-block {
@@ -160,6 +161,9 @@ main{
 }
 .d-flex {
 	display: flex;
+}
+.scroll-hide{
+	overflow: hidden;
 }
 .bg-light{
 	background: #F5F5F5;

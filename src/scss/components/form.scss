@@ -66,12 +66,15 @@
       color: #E0C463;
       font-weight: 400;
       font-size: 13px;
-      top: 37px;
+      top: 43px;
       right: 15px;
       cursor: pointer;
       display: block;
       &:hover{
         font-weight: bold;
+      }
+      @include md{
+        top: 37px;
       }
     }
   }
@@ -100,6 +103,9 @@
     }
     &:focus, &:focus-visible{
       border: 1px solid #E0C463;
+    }
+    &.pass-word{
+      padding: 0 55px 0 15px;
     }
   }
   &__button-text{

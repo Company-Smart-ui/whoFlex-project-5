@@ -355,4 +355,55 @@
             </nav>
         </div>
     </div>
+
+    <div class="notification">
+        <div class="notification__intro">
+            <div class="notification__wrap">
+                <h3>Notifications</h3>
+                <button class="notification__settings">
+                    <svg width="19" height="20" viewBox="0 0 19 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.7335 3.69089L18.014 5.90929C18.2327 6.28766 18.1016 6.77563 17.7232 6.99383L17.2745 7.25305C16.5874 7.64986 16.1942 8.33095 16.1942 9.12468V10.0756C16.1942 10.8694 16.5876 11.5505 17.2745 11.9473L17.7232 12.2065C18.1016 12.4246 18.2321 12.9125 18.014 13.291L16.7335 15.5094C16.5148 15.8878 16.0274 16.0183 15.6489 15.8002L15.1996 15.541C14.512 15.1442 13.7248 15.1442 13.0379 15.5416L12.2151 16.0171C11.5286 16.4139 11.1354 17.095 11.1354 17.8881V18.4066C11.1354 18.8434 10.7778 19.2009 10.3411 19.2009H7.78008C7.34326 19.2009 6.98578 18.8433 6.98578 18.4066V17.8881C6.98578 17.0951 6.59315 16.414 5.90611 16.0171L5.08329 15.5416C4.39567 15.1441 3.60847 15.1441 2.92085 15.541L2.47098 15.8008C2.09261 16.0189 1.60464 15.8884 1.38644 15.51L0.105879 13.2916C-0.112749 12.9132 0.0183157 12.4253 0.396686 12.2071L0.845425 11.9478C1.53304 11.551 1.92567 10.8699 1.92567 10.0762V9.12467C1.92567 8.33165 1.53233 7.64985 0.845425 7.25303L0.396686 6.99381C0.0183157 6.77519 -0.112206 6.28779 0.105879 5.90928L1.38644 3.69087C1.60507 3.3125 2.09247 3.18198 2.47098 3.40007L2.92085 3.65984C3.60847 4.05665 4.39567 4.05665 5.08329 3.65928L5.90611 3.1838C6.59315 2.78699 6.98578 2.1059 6.98578 1.31273V0.794302C6.98578 0.35748 7.34337 0 7.78008 0H10.3411C10.7779 0 11.1354 0.357586 11.1354 0.794302V1.31273C11.1354 2.10576 11.528 2.78685 12.2151 3.1838L13.0379 3.65928C13.7255 4.05677 14.5127 4.05677 15.2003 3.65984L15.6502 3.40007C16.0286 3.182 16.5165 3.3125 16.7347 3.69087L16.7335 3.69089ZM9.06001 5.56486C11.2885 5.56486 13.0952 7.37152 13.0952 9.60004C13.0952 11.8286 11.2885 13.6352 9.06001 13.6352C6.8315 13.6352 5.02484 11.8286 5.02484 9.60004C5.02484 7.37152 6.8315 5.56486 9.06001 5.56486Z" fill="#666666"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="notification__wrapper">
+                @@include('../html-templates/notification-item.html',{
+                img: "skills_desk.png",
+                text: "Considering Transferable Skills in Talent Acquisition and Retention",
+                blackText: "Coaching Yourself to Career Success",
+                day: "5d",
+                })
+                @@include('../html-templates/notification-item.html',{
+                img: "previous.png",
+                text: "Here are some new releases from your previous instructors:",
+                blackText: "Coaching Yourself to Career Success",
+                day: "3d",
+                })
+                @@include('../html-templates/notification-item.html',{
+                img: "answered.png",
+                text: "The instructor has answered your coaching question:",
+                blackText: "Coaching Yourself....",
+                day: "3d",
+                })
+                @@include('../html-templates/notification-item.html',{
+                img: "skills_desk.png",
+                text: "Considering Transferable Skills in Talent Acquisition and Retention",
+                blackText: "Coaching Yourself to Career Success",
+                day: "5d",
+                })
+                @@include('../html-templates/notification-item.html',{
+                img: "previous.png",
+                text: "Here are some new releases from your previous instructors:",
+                blackText: "Coaching Yourself to Career Success",
+                day: "3d",
+                })
+                @@include('../html-templates/notification-item.html',{
+                img: "answered.png",
+                text: "The instructor has answered your coaching question:",
+                blackText: "Coaching Yourself....",
+                day: "3d",
+                })
+            </div>
+        </div>
+    </div>
 </header>

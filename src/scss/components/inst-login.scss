@@ -19,7 +19,7 @@
     left: 0;
     top: 0;
     right: 0;
-    @include md{
+    @include xl{
       max-width: 1200px;
     }
     &.open{
@@ -38,7 +38,7 @@
   }
   &__wrap-img{
     display: none;
-    @include md{
+    @include xl{
       display: block;
       width: 50%;
     }
@@ -54,15 +54,8 @@
     @include sm{
       padding: 66px 57px;
     }
-    @include md{
-      width: 60%;
-      padding: 45px 35px;
-    }
-    @include l{
-      width: 50%;
-    }
     @include xl{
-      padding: 66px 57px;
+      width: 50%;
     }
   }
   &__wrap-form{
@@ -78,6 +71,9 @@
   }
   .button{
     margin-bottom: 20px;
+    @include l{
+      font-size: 15px;
+    }
   }
   .forgotPassBnt{
     display: block;
