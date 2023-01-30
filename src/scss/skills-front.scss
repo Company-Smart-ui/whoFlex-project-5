@@ -24,6 +24,15 @@
         max-width: 450px;
       }
       @include xl{
+        max-width: 500px;
+      }
+      @media screen and (min-height: 600px){
+        max-width: 450px;
+      }
+      @media screen and (min-height: 700px){
+        max-width: 650px;
+      }
+      @media screen and (min-height: 700px) and (min-width: $xxl){
         max-width: 650px;
       }
     }
@@ -54,6 +63,7 @@
   }
   .button__second{
     padding-top: 13px;
+    text-transform: capitalize;
     @include l{
       min-height: 58px;
       padding-top: 16px;
