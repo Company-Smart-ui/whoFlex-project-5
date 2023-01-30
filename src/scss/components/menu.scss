@@ -368,6 +368,12 @@ body{
 }
 .search_box {
   position: relative;
+  @include sm{
+    max-width: 365px;
+  }
+  @include md{
+    margin: auto;
+  }
   &_desk{
     display: none;
     @include l{

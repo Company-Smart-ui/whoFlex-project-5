@@ -10,6 +10,9 @@
   @include lg{
     padding-top: 75px;
   }
+  @include xl{
+    padding-top: 100px;
+  }
 
   &::after{
     position: absolute;
@@ -35,9 +38,6 @@
     @include md{
       max-height: 740px;
       width: 50%;
-    }
-    @include lg{
-      //bottom: 70px;
     }
   }
   &__title{
@@ -74,6 +74,9 @@
   }
   &__content{
     margin-bottom: 30px;
+    @include sm{
+      width: 70%;
+    }
     @include md{
       width: 50%;
       margin-bottom: 180px;
@@ -111,6 +114,7 @@
     @include xl{
       font-size: 24px;
       line-height: 36px;
+      margin-bottom: 36px;
     }
   }
   .container{

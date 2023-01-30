@@ -71,6 +71,12 @@
         @include xl{
           padding-top: 0;
           margin-bottom: 0;
+          padding-left: 60px;
+        }
+        @include xxl{
+          img{
+            max-width: 500px;
+          }
         }
       }
     }
@@ -130,6 +136,12 @@
     img{
       display: block;
       margin: 0 auto;
+      @include sm{
+        width: 70%;
+      }
+      @include md{
+        width: auto;
+      }
     }
   }
   &__block-content{
@@ -169,5 +181,8 @@
   }
   &__wrap-btn{
     text-align: center;
+    .button{
+      min-width: 147px;
+    }
   }
 }

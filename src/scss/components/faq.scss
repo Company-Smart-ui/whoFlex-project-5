@@ -47,6 +47,7 @@
       margin-bottom: 0;
       @include lg{
         width: 100%;
+        min-height: 215px;
       }
     }
   }
