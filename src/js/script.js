@@ -257,18 +257,15 @@ function searchHistoryOpen(){
             const searchBtn = search.querySelector('.common_input');
             searchBtn.addEventListener('focus', function(){
                 searchHistory.classList.add('open');
-                document.body.classList.add('scroll-hide');
             })
-            // searchBtn.addEventListener('blur', function(){
-            //     searchHistory.classList.remove('open');
-            //     document.body.classList.remove('scroll-hide');
-            // })
-            document.addEventListener( 'click', (e) => {
+            searchBtn.addEventListener('click', function(){
+                searchHistory.classList.add('open');
+            })
+            document.addEventListener(  'mousedown', (e) => {
                 const withinSearchHistory = e.composedPath().includes(searchHistory);
                 const withinSearchHistoryBtn = e.composedPath().includes(searchBtn);
                 if (  ! withinSearchHistory && ! withinSearchHistoryBtn) {
                     searchHistory.classList.remove('open')
-                    document.body.classList.remove('scroll-hide');
                 }
             })
         })

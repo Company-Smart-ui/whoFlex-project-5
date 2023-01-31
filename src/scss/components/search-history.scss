@@ -17,11 +17,11 @@
     max-height: calc(100vh - 50px);
     opacity: 1;
     height: auto;
-    @include sm{
+    @include l{
       max-height: calc(100vh - 150px);
     }
   }
-  @include sm{
+  @include l{
     max-width: 500px;
     left: 280px;
     box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
