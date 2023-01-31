@@ -207,6 +207,7 @@ function closeModal(){
     closeBtn.forEach(btn => {
         btn.addEventListener('click', function (){
             btn.closest('.wrap-modal').classList.remove('open');
+            btn.closest('.wrap-modal').classList.remove('fixed');
         })
     })
 }closeModal();

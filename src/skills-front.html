@@ -27,13 +27,35 @@
         </div>
         <h1>Welcome, John Deo</h1>
         <p>Lorem ipsum dolor sit amet, consec tetur adipiscing elit, sed do eiusmod incididunt ut labore et dolore.</p>
-        <a href="#" class="button button__second">Add New Skill</a>
+        <a href="#" class="button button__second" onclick="openModalAddSkill()">Add New Skill</a>
     </section>
+    <div class="wrap-modal skill-modal__wrapper fixed">
+        <div class="skill-modal">
+            <button class="close-btn">
+                <svg width="39" height="37" viewBox="0 0 39 37" fill="none">
+                    <path d="M28.875 9.05212L9.625 27.1563" stroke="#797979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9.625 9.05212L28.875 27.1563" stroke="#797979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="skill-modal__wrap-img">
+                <img src="./images/balloons.png" alt="balloons">
+            </div>
+            <h2 class="skill-modal__title">Skill Added Successfully</h2>
+            <p class="skill-modal__text">Your new "skill developer" has  been added to your profile.</p>
+            <a href="#" class="button button__second">Save Your Skills</a>
+        </div>
+    </div>
 </main>
 
 @@include('./components/footer.html')
 
 <script src="js/script.js"></script>
+<script>
+    function openModalAddSkill(){
+        const modalAddSkill = document.querySelector('.skill-modal__wrapper');
+        modalAddSkill.classList.add('fixed');
+    }
+</script>
 </body>
 
 </html>
