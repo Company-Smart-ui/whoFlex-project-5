@@ -163,8 +163,17 @@ main{
 .d-flex {
 	display: flex;
 }
-.scroll-hide, .scroll-h{
+.scroll-hide{
 	overflow: hidden;
+	@include sm{
+		overflow: auto;
+	}
+}
+.scroll-h{
+	overflow: hidden;
+	@include md{
+		overflow: auto;
+	}
 }
 .bg-light{
 	background: #F5F5F5;

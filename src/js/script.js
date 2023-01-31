@@ -217,14 +217,16 @@ function notificationOpen(){
     const notificationBlock = document.querySelector('.notification');
     if(notificationBlock){
         notificationBtn.addEventListener('click', function (){
-            notificationBlock.classList.toggle('open')
+            notificationBlock.classList.toggle('open');
+            notificationBtn.classList.toggle('active');
             document.body.classList.toggle('scroll-hide');
         })
         document.addEventListener( 'click', (e) => {
             const withinNotification = e.composedPath().includes(notificationBlock);
             const withinNotificationBtn = e.composedPath().includes(notificationBtn);
             if (  ! withinNotification && ! withinNotificationBtn) {
-                notificationBlock.classList.remove('open')
+                notificationBlock.classList.remove('open');
+                notificationBtn.classList.remove('active');
                 document.body.classList.remove('scroll-hide');
             }
         })
