@@ -45,8 +45,12 @@
     }
     .close-btn{
       @include sm{
-        top: 10px;
-        right: 10px;
+        top: 7px;
+        right: 9px;
+      }
+      svg{
+        width: 30px;
+        height: 30px;
       }
     }
     .button__second{
@@ -146,5 +150,8 @@
 .modal-complete{
   .button__second{
     text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

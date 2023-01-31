@@ -62,7 +62,6 @@ function toggleSignUpModal() {
 function hideEmailSignUpEmail(e) {
     e.preventDefault()
     signupImg.src = "images/sign-up2.png"
-    // haveAccount.innerHTML = 'Don\'t have an account?'
     signUpInputs.classList.add("d-block")
     signUpInputs.classList.remove("d-none")
     signUpButton.classList.add("d-none")
@@ -71,7 +70,6 @@ function hideEmailSignUpEmail(e) {
     signupRightContainer.classList.remove("mt-36")
     whoflexAggrement.classList.add("mb-17", "mt-90")
     whoflexAggrement.classList.remove("mb-0", "mt-45" )
-    // signupModalContainer.style.height = "679px"
     whoflexLeftTextContainer.style.bottom = "192px"
     signUpTitle.classList.add("d-none")
 }
@@ -90,7 +88,6 @@ function showEmailSignUpEmail(e) {
     signupRightContainer.classList.remove("mt-0")
     whoflexAggrement.classList.add("mb-0", "mt-45")
     whoflexAggrement.classList.remove("mb-17", "mt-90")
-    // signupModalContainer.style.height = "642px"
     whoflexLeftTextContainer.style.bottom = "158px"
     signUpTitle.classList.remove("d-none")
 
@@ -158,27 +155,6 @@ function checkEmailValidation() {
     } else {
         errorMessage.style.display = "none";
         email.style.border = "1px solid #dddddd";
-    }
-};
-
-
-
-function checkPassValidation() {
-    const password = document.getElementById("password");
-    const passHelpText = document.getElementById("passHelpText");
-    password.addEventListener('change', function(){
-        if (password.value.length < 6) {
-            passHelpText.style.color = "#ea4335";
-            password.style.border = "1px solid #ea4335";
-        } else {
-            passHelpText.style.color = "#666666";
-            password.style.border = "1px solid #dddddd";
-        }
-    })
-
-    if (password.value.length >= 6) {
-        passHelpText.style.color = "#666666";
-        password.style.border = "1px solid #dddddd";
     }
 };
 

@@ -19,7 +19,10 @@
     max-width: none;
     font-family: $secondFont !important;
     @include md{
-      padding: 58px 0 38px;
+      padding: 58px 0 37px;
+    }
+    @include xxl{
+      padding-top: 58px;
     }
     h3{
       display: none;
@@ -27,6 +30,7 @@
         font-size: 16px !important;
         line-height: 20px !important;
         border-bottom: none !important;
+        margin-bottom: 10px;
         display: block;
       }
     }
@@ -43,6 +47,7 @@
         width: auto;
         font-size: 14px;
         position: relative;
+        margin-left: 10px;
         @include md{
           font-size: 13px;
           line-height: 18px;
@@ -85,7 +90,7 @@
       display: flex;
       flex-direction: column-reverse;
       @include md{
-        margin-bottom: 10px;
+        margin-bottom: 0;
         flex-direction: row;
         gap: 30px;
       }
@@ -119,10 +124,11 @@
       justify-content: flex-end;
     }
     .footer__social{
-      gap: 4px;
+      gap: 8px;
       min-width: 208px;
       justify-content: center;
       @include md{
+        gap: 4px;
         justify-content: flex-start;
       }
       svg{
@@ -139,7 +145,7 @@
       max-width: none;
       margin: 0;
       @include md{
-        margin-top: 8%;
+        margin-top: 44px;
       }
       a{
         display: none;
