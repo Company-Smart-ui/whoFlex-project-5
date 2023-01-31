@@ -124,6 +124,18 @@ function checkSignUpEmailValidation() {
 };
 function checkSignInEmailValidation() {
     const filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    signinEmail.addEventListener('keyup', function (){
+        if (!filter.test(signinEmail.value)) {
+            signinErrorMessage.style.display = "block";
+            signinEmail.style.border = "1px solid #ea4335";
+
+            signinEmail.focus();
+            return false;
+        } else {
+            signinErrorMessage.style.display = "none";
+            signinEmail.style.border = "1px solid #dddddd";
+        }
+    })
     if (!filter.test(signinEmail.value)) {
         signinErrorMessage.style.display = "block";
         signinEmail.style.border = "1px solid #ea4335";
