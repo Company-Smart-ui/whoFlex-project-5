@@ -249,6 +249,32 @@ function notificationOpen(){
     }
 }notificationOpen();
 
+function searchHistoryOpen(){
+    const searchBox = document.querySelectorAll('.search_box');
+    const searchHistory = document.querySelector('.search-history');
+    if(searchBox && searchHistory){
+        searchBox.forEach(search => {
+            const searchBtn = search.querySelector('.common_input');
+            searchBtn.addEventListener('focus', function(){
+                searchHistory.classList.add('open');
+                document.body.classList.add('scroll-hide');
+            })
+            // searchBtn.addEventListener('blur', function(){
+            //     searchHistory.classList.remove('open');
+            //     document.body.classList.remove('scroll-hide');
+            // })
+            document.addEventListener( 'click', (e) => {
+                const withinSearchHistory = e.composedPath().includes(searchHistory);
+                const withinSearchHistoryBtn = e.composedPath().includes(searchBtn);
+                if (  ! withinSearchHistory && ! withinSearchHistoryBtn) {
+                    searchHistory.classList.remove('open')
+                    document.body.classList.remove('scroll-hide');
+                }
+            })
+        })
+    }
+}searchHistoryOpen();
+
 function notificationOpenInfo(){
     const notificationInfoBtn = document.querySelectorAll('.notification__info-btn');
     if(notificationInfoBtn){

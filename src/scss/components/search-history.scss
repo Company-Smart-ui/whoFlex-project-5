@@ -1,0 +1,90 @@
+.search-history{
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #ffffff;
+  width: 100%;
+  box-shadow: inset 0 4px 4px rgb(0 0 0 / 10%);
+  transform: translateY(4rem);
+
+  height: 0;
+  opacity: 0;
+  &.open{
+    overflow: hidden;
+    transition: .3s;
+    transform: translateY(0);
+    max-height: calc(100vh - 50px);
+    opacity: 1;
+    height: auto;
+    @include sm{
+      max-height: calc(100vh - 150px);
+    }
+  }
+  @include sm{
+    max-width: 500px;
+    left: 280px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+    border-radius: 0 0 10px 10px;
+  }
+  &__list{
+    color: #666666;
+    padding-bottom: 78px !important;
+    margin-bottom: 20px !important;
+    border-bottom: 1px solid #CCCCCC;
+    li{
+      display: flex;
+      align-items: center;
+      padding: 9px 30px;
+      transition: .3s;
+      &:hover{
+        cursor: pointer;
+        background-color: #f2f2f2;
+        font-weight: 700;
+        color: black;
+      }
+    }
+    svg{
+      margin-right: 11px;
+    }
+  }
+  &__intro{
+    padding: 24px 0;
+    overflow: auto;
+    height: 100%;
+    @include sm{
+      overflow-y: scroll;
+    }
+  }
+  &__look{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 25px 28px;
+    .button{
+      color: #E0C463;
+      border: 2px solid #E0C463;
+      border-radius: 100px;
+      background-color: #fff;
+      padding: 10px 23px;
+      box-shadow: none;
+      @include md{
+        font-size: 17px;
+        line-height: 22px;
+      }
+      &:hover{
+        background-color: #fff;
+        color: gray;
+      }
+    }
+  }
+  h3{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    padding: 0 30px 10px;
+    @include sm{
+      font-size: 21px;
+    }
+  }
+}
