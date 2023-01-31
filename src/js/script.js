@@ -221,13 +221,6 @@ function closeModal(){
             btn.closest('.wrap-modal').classList.remove('open');
         })
     })
-    // document.addEventListener( 'click', (e) => {
-    //     const withinModal = e.composedPath().includes(modal);
-    //     const withinOpenBtn = e.composedPath().includes(openBtn);
-    //     if (  ! withinOpenBtn  && ! withinModal) {
-    //         wrapModal.classList.remove('open')
-    //     }
-    // })
 }closeModal();
 
 function notificationOpen(){
@@ -249,25 +242,42 @@ function notificationOpen(){
     }
 }notificationOpen();
 
+
+const searchHistory = document.querySelector('.search-history');
+const historyList = document.querySelector('.search-history__list');
+const searchBoxDesk = document.querySelector('.search_box_desk');
+
 function searchHistoryOpen(){
     const searchBox = document.querySelectorAll('.search_box');
-    const searchHistory = document.querySelector('.search-history');
+    const menu = document.querySelector('.m_nav_logo_box');
+    const closeSearch = document.querySelector('.close-search');
     if(searchBox && searchHistory){
         searchBox.forEach(search => {
             const searchBtn = search.querySelector('.common_input');
             searchBtn.addEventListener('focus', function(){
                 searchHistory.classList.add('open');
+                searchBoxDesk.classList.add('open');
+                menu.classList.add('hide');
+                document.body.classList.add('scroll-h');
             })
             searchBtn.addEventListener('click', function(){
                 searchHistory.classList.add('open');
             })
             document.addEventListener(  'mousedown', (e) => {
                 const withinSearchHistory = e.composedPath().includes(searchHistory);
-                const withinSearchHistoryBtn = e.composedPath().includes(searchBtn);
+                const withinSearchHistoryBtn = e.composedPath().includes(searchBoxDesk);
                 if (  ! withinSearchHistory && ! withinSearchHistoryBtn) {
-                    searchHistory.classList.remove('open')
+                    searchHistory.classList.remove('open');
+                    searchBoxDesk.classList.remove('open');
+                    document.body.classList.remove('scroll-h');
                 }
             })
+        })
+        closeSearch.addEventListener('click', function (){
+            searchHistory.classList.remove('open');
+            searchBoxDesk.classList.remove('open');
+            menu.classList.remove('hide');
+            document.body.classList.remove('scroll-h');
         })
     }
 }searchHistoryOpen();
@@ -291,6 +301,44 @@ function notificationOpenInfo(){
         })
     }
 }notificationOpenInfo();
+
+function createSearchHistory(searchInput){
+    const addItem = document.createElement('li');
+    addItem.innerHTML = '<svg width="23" height="23" viewBox="0 0 23 23" fill="none">\n' +
+        '                     <path d="M14.041 16.2752L14.041 16.2752C14.3586 16.6114 14.8887 16.6265 15.225 16.309L15.2251 16.309C15.5612 15.9913 15.5764 15.4612 15.2589 15.1249L15.2589 15.1249L12.6821 12.3968C12.4607 12.1623 12.3374 11.8521 12.3374 11.5299L12.3374 6.2499C12.3374 5.78736 11.9624 5.4124 11.4999 5.4124C11.0374 5.4124 10.6624 5.78737 10.6624 6.2499V11.5299C10.6624 12.2798 10.9493 13.0015 11.4643 13.5467L14.041 16.2752Z" fill="#666666" stroke="#666666" stroke-width="0.1"/>\n' +
+        '                     <path d="M11.5 22.05C17.3266 22.05 22.05 17.3266 22.05 11.5C22.05 5.67339 17.3266 0.95 11.5 0.95C5.67339 0.95 0.95 5.67339 0.95 11.5C0.95 17.3266 5.67339 22.05 11.5 22.05ZM20.375 11.5C20.375 16.4014 16.4014 20.375 11.5 20.375C6.59824 20.375 2.625 16.4014 2.625 11.5C2.625 6.59824 6.59824 2.625 11.5 2.625C16.4014 2.625 20.375 6.59824 20.375 11.5Z" fill="#666666" stroke="#666666" stroke-width="0.1"/>\n' +
+        '                   </svg>\n' +
+        '                   <span>' +
+        searchInput.value +
+        '</span>';
+
+    historyList.append(addItem);
+};
+
+(function(){
+    const searchBox = document.querySelectorAll('.search_box');
+    if(searchBox){
+        searchBox.forEach(search => {
+            const searchInput = search.querySelector('.common_input');
+            searchInput.addEventListener("keyup", function(e) {
+                if (e.keyCode === 13) {
+                    if(searchInput.value.length > 1 && searchInput.value !== " "){
+                        searchInput.select();
+                        document.execCommand("copy");
+                        createSearchHistory(searchInput);
+                        searchInput.blur();
+                        searchInput.value = "";
+                        searchHistory.classList.remove('open');
+                        searchBoxDesk.classList.remove('open');
+                    } else{
+                        searchInput.blur();
+                        searchInput.value = "";
+                    }
+                }
+            });
+        })
+    }
+}());
 
 
 

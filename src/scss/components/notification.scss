@@ -32,8 +32,10 @@
     padding: 24px 0;
     overflow: auto;
     height: 100%;
+    max-height: calc(100vh - 50px);
     @include sm{
       overflow-y: scroll;
+      max-height: calc(100vh - 150px);
     }
   }
   &__item{
