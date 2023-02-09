@@ -71,8 +71,9 @@
   &__question{
     color: #262537;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 29px;
+    width: 88%;
     margin-bottom: 10px;
     @include md{
       font-size: 20px;
@@ -80,7 +81,6 @@
     }
     @include xl{
       font-size: 24px;
-      width: 88%;
     }
   }
   &__answer{
