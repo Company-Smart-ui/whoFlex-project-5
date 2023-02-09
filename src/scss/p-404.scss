@@ -44,4 +44,9 @@
       padding-top: 18px;
     }
   }
+  img {
+    @include l{
+      width: 580px;
+    }
+  }
 }

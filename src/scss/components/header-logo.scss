@@ -8,14 +8,14 @@
     position: absolute;
     left: 20px;
     top: 20px;
-    max-width: 110px;
+    max-width: 90px;
     @include md{
       left: 40px;
-      top: 40px;
+      top: 25px;
       max-width: 127px;
     }
     @include l{
-      top: 45px;
+      top: 30px;
       left: 64px;
     }
   }

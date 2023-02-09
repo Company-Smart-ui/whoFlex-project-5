@@ -233,6 +233,11 @@ body{
   }
 }
 .m_nav_logo_box .nav_logo {
+  margin: 0;
+  width: 80px;
+  img{
+    max-width: 100%;
+  }
   @include sm{
     margin: 0;
     width: 125px;
@@ -365,13 +370,7 @@ body{
     align-items: center;
 }
 }
-.m_nav_logo_box .nav_logo {
-  margin: 0;
-  width: 100px;
-  img{
-    max-width: 100%;
-  }
-}
+
 .search_box {
   position: relative;
   @include sm{
@@ -447,11 +446,9 @@ body{
 .wrapper-btns{
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
   margin-right: 65px;
   @include l{
     margin-right: 0;
-    flex-direction: row;
   }
   button{
     margin-left: 22px;

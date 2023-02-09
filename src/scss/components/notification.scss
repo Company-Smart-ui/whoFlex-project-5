@@ -32,11 +32,12 @@
     right: 230px;
   }
   &__intro{
-    padding: 24px 0;
+    padding: 24px 0 0;
     overflow: auto;
     height: 100%;
     max-height: calc(100vh - 50px);
     @include sm{
+      padding: 24px 0;
       overflow-y: scroll;
       max-height: calc(100vh - 150px);
     }
@@ -72,6 +73,20 @@
   &__settings{
     width: 20px;
     height: 20px;
+    position: relative;
+
+    &:hover:after {
+      content: "";
+      display: block;
+      position: absolute;
+      border-radius: 50%;
+      width: 33px;
+      height: 33px;
+      background: #e8e8e8;
+      left: -7px;
+      z-index: -1;
+      top: -7px;
+    }
   }
   &__content{
     font-size: 14px;
@@ -117,6 +132,22 @@
   }
   &__info-btn{
     height: 10px;
+    position: relative;
+    z-index: 25;
+    @include md{
+      &:hover:after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background: #e8e8e8;
+        left: -7px;
+        z-index: -1;
+        top: -10px;
+      }
+    }
   }
   &__info-dropdown{
     color: black;
@@ -188,5 +219,10 @@
   h3{
     font-weight: 400;
     font-size: 24px;
+  }
+  &__footer {
+    @include sm {
+     display: none;
+    }
   }
 }

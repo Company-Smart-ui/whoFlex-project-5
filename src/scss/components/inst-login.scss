@@ -65,7 +65,7 @@
   &__wrap-form{
     padding-bottom: 30px;
     border-bottom: 1px solid #DDDDDD;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
     max-width: 390px;
   }
   .form__title{
@@ -77,6 +77,9 @@
     margin-bottom: 20px;
     @include l{
       font-size: 15px;
+    }
+    @include md{
+      margin-bottom: 13px;
     }
   }
   .forgotPassBnt{

@@ -49,6 +49,10 @@
       padding: 0 15px;
       font-size: 14px;
       text-align: center;
+
+      @include md {
+        font-size: 20px;
+      }
     }
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -57,7 +61,7 @@
     }
   }
   &__group{
-    margin-bottom: 16px;
+    margin-bottom: 30px;
     color: black;
     position: relative;
     .showPass{
@@ -97,6 +101,10 @@
     font-size: 14px;
     &[type=password]{
       font-size: 12px !important;
+
+      @include md{
+        font-size: 7px !important;
+      }
     }
     @include md{
       height: 40px;

@@ -49,13 +49,13 @@
         right: 9px;
       }
       svg{
-        width: 30px;
-        height: 30px;
+        width: 25px;
+        height: 25px;
       }
     }
     .button__second{
       @include md{
-        font-size: 15px;
+        font-size: 17px;
         text-transform: capitalize;
      }
     }
@@ -90,10 +90,9 @@
   }
   &__wrap-img{
     max-width: 233px;
-    margin: 0 auto -10px;
+    margin: 0 auto;
     @include sm{
       max-width: 272px;
-      margin-bottom: -60px;
     }
   }
 }
@@ -148,10 +147,15 @@
   }
 }
 .modal-complete{
-  .button__second{
+  .button__second{ 
+    background: $fontColor;
     text-transform: capitalize;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+      background:$secondAccent;
+    }
   }
 }

@@ -16,6 +16,9 @@
   cursor: pointer;
   background-color: #343434;
   border-radius: 50%;
+  &:hover {
+    background-color: #747474;
+  }
   @include sm{
     height: 43px;
     width: 43px;
