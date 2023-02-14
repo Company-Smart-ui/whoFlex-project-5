@@ -152,7 +152,7 @@
     &:hover {
       background: #eaeaea;
       border-radius: 50%;
-      line-height: 1;
+      line-height: 0;
     }
     @include sm{
       top: 22px;

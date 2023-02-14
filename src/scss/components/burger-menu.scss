@@ -17,12 +17,12 @@
   background-color: #343434;
   border-radius: 50%;
   &:hover {
-    background-color: #747474;
+    background-color: #a9a9a9;
   }
   @include sm{
     height: 43px;
     width: 43px;
-    top: 15px;
+    top: 22px;
   }
   @include l{
     gap: 4.4px;

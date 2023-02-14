@@ -44,13 +44,16 @@
       font-size: 15px;
     }
     .close-btn{
-      @include sm{
+      display: none;
+      @include md{
         top: 7px;
+        display: block;
         right: 9px;
-      }
-      svg{
-        width: 25px;
-        height: 25px;
+
+        svg{
+          width: 20px;
+          height: 20px;
+        }
       }
     }
     .button__second{
@@ -148,14 +151,14 @@
 }
 .modal-complete{
   .button__second{ 
-    background: $fontColor;
+    background: $secondAccent;
     text-transform: capitalize;
     display: flex;
     align-items: center;
     justify-content: center;
 
     &:hover {
-      background:$secondAccent;
+      background:$fontColor;
     }
   }
 }
