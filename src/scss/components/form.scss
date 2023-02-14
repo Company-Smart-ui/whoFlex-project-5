@@ -135,9 +135,9 @@
       right: 20px;
     }
     &:hover{
-      path{
-        filter: drop-shadow(3px 0 3px #797979);
-      }
+      background: #eaeaea;
+      border-radius: 50%;
+      line-height: 0;
     }
     path{
       transition: .3s;
