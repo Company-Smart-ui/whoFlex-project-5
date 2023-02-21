@@ -17,12 +17,6 @@
     <button class="inst-login__open button__second button">Instructor login</button>
     <div class="open wrap-modal inst-login__wrapper">
         <div class="modal form inst-login">
-            <button class="close-btn">
-                <svg width="39" height="37" viewBox="0 0 39 37" fill="none">
-                    <path d="M28.875 9.05212L9.625 27.1563" stroke="#797979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M9.625 9.05212L28.875 27.1563" stroke="#797979" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </button>
             <div class="inst-login__wrap-img">
                 <img src="./images/instructor-login.jpeg" alt="instructor-login">
             </div>
@@ -33,7 +27,7 @@
                     <form>
                         <div class="form__group">
                             <label class="form__label" for="instrLoginEmail">Email</label>
-                            <input class="form__input" type="email" id="instrLoginEmail" onchange="checkSignInEmailValidation()" required>
+                            <input class="form__input" type="email" id="instrLoginEmail" oninput="checkSignInEmailValidation()" required>
                             <span class="error-message" id="signin-error-message">Please enter a valid email</span>
                         </div>
                         <div class="form__group">
@@ -45,7 +39,7 @@
                     </form>
                     <a href="./forgot-password.html" class="link forgotPassBnt">Forgot password?</a>
                 </div>
-                <p class="form__button-text">Interested in becoming a Whoflex Instructor? <a href="#" class="link">Apply here</a></p>
+                <p class="form__button-text">Interested in becoming a Whoflex Instructor? <a href="/instructor-login.html" class="link">Apply here</a></p>
             </div>
         </div>
     </div>

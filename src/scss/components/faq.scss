@@ -34,11 +34,13 @@
     box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
     border-radius: 3.65666px;
     padding: 20px 20px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @include lg{
       width: calc(50% - 20px);
       margin-bottom: 0;
-      padding: 25px 40px;
-      min-height: 301px;
+      padding: 35px 40px;
     }
     &:last-child{
       margin-bottom: 0;
@@ -51,6 +53,7 @@
   &__content {
     display: flex;
     gap: 15px;
+    margin-bottom: 20px;
     align-items: center;
   }
   &__number{
@@ -62,8 +65,6 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin-bottom: 10px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,10 +75,8 @@
     font-size: 17px;
     line-height: 29px;
     width: 88%;
-    margin-bottom: 10px;
     @include md{
       font-size: 20px;
-      margin-bottom: 12px;
     }
     @include xl{
       font-size: 24px;

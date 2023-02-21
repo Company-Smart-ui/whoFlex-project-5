@@ -125,17 +125,16 @@ function checkSignInEmailValidation() {
         if (!filter.test(signinEmail.value)) {
             signinErrorMessage.style.display = "block";
             signinEmail.style.border = "1px solid #ea4335";
-
             signinEmail.focus();
             return false;
         } else {
             signinErrorMessage.style.display = "none";
-            signinEmail.style.border = "1px solid #dddddd";
+            signinEmail.style.border = "1px solid #e0c463";
         }
     })
     if (!filter.test(signinEmail.value)) {
         signinErrorMessage.style.display = "block";
-        signinEmail.style.border = "1px solid #ea4335";
+        signinEmail.style.border = "1px solid #e0c463";
 
         signinEmail.focus();
         return false;
@@ -154,7 +153,7 @@ function checkEmailValidation() {
         return false;
     } else {
         errorMessage.style.display = "none";
-        email.style.border = "1px solid #dddddd";
+        email.style.border = "1px solid #ea4335s";
     }
 };
 
@@ -331,6 +330,18 @@ function createSearchHistory(searchInput){
     }
 }());
 
+
+function openSearchMobile() {
+    const searchBtnIcon = document.querySelector('.search_icon_mobile');
+    const searchBlock = document.querySelector('.search_box');
+    const searchHistoryCard = document.querySelector('.search-history');
+    
+    searchBtnIcon.addEventListener("click", function() {
+        this.classList.toggle('active');
+        searchBlock.classList.toggle('active');
+        searchHistoryCard.classList.toggle('active');
+    });
+} openSearchMobile();
 
 
 

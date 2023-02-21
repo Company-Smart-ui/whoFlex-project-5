@@ -53,7 +53,9 @@
       padding: 24px 16px;
     }
     &:hover{
-      background-color: #F2F2F2;
+      @include md{
+        background-color: #F2F2F2;
+      }
     }
     &:last-child{
       border: none;
@@ -75,17 +77,19 @@
     height: 20px;
     position: relative;
 
-    &:hover:after {
-      content: "";
-      display: block;
-      position: absolute;
-      border-radius: 50%;
-      width: 33px;
-      height: 33px;
-      background: #e8e8e8;
-      left: -7px;
-      z-index: -1;
-      top: -7px;
+    @include md{
+      &:hover:after {
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        width: 33px;
+        height: 33px;
+        background: #e8e8e8;
+        left: -7px;
+        z-index: -1;
+        top: -7px;
+      }
     }
   }
   &__content{
@@ -133,7 +137,7 @@
   &__info-btn{
     height: 10px;
     position: relative;
-    z-index: 25;
+    z-index: 0;
     @include md{
       &:hover:after {
         content: "";

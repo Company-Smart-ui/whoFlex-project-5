@@ -25,14 +25,17 @@
     top: 100%;
     max-width: 500px;
   }
-  &.open{
+  &.open, &.active{
+    background: transparent;
     overflow: hidden;
     transition: .3s;
-    transform: translateY(0);
+    transform: translateY(7%);
     max-height: calc(100vh - 50px);
     opacity: 1;
     height: auto;
     @include md{
+      background: #fff;
+      transform: translateY(0);
       max-height: calc(100vh - 300px);
     }
     @include l{
@@ -45,9 +48,6 @@
   }
   @media screen and (max-width: 767px){
     box-shadow: none;
-    &.open{
-      min-height: 100vh;
-    }
     path{
       fill: #999999;
     }
@@ -106,9 +106,9 @@
       box-shadow: 0 0 9px -2px rgba(0, 0, 0, 0.17);
       border-radius: 4px;
       margin: 30px 17px;
+      background: #Fff;
     }
     @include md{
-      overflow-y: scroll;
       max-height: calc(100vh - 300px);
     }
     @include l{
@@ -142,6 +142,7 @@
       }
       &:hover{
         background-color: #fff;
+        border: 2px solid gray;
         color: gray;
       }
     }
@@ -172,23 +173,18 @@
   }
 }
 
-.search_box_desk.open{
+.search_box_desk.active{
   @media screen and (max-width: 767px) {
     display: block;
     height: 64px;
     background: #fff;
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 5;
-    max-width: 100vw;
     left: 0;
-    top: 0;
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+    top: 57px;
     .common_input_white{
-      box-shadow: none;
-      width: 100%;
-      padding: 32px 62px;
-      font-size: 18px;
+     
       &::placeholder{
         color: #C4C4C4;
       }
@@ -197,15 +193,35 @@
       }
     }
     button{
-      display: block;
-      position: absolute;
-      top: 25px;
-      right: 22px;
+      display: none;
     }
     .search_icon{
-      left: 18px;
-      top: 22px;
-      right: auto;
+      top: 25px;
+      right: 35px;
     }
+  }
+}
+
+.nav_wrap {
+  align-items: center;
+  display: flex;
+}
+
+.search_icon_mobile {
+  width: 32px;
+  margin-left: 20px;
+  height: 32px;
+  border-radius: 50%;
+
+  &.active {
+    background: #f0ecec;
+  }
+
+  img {
+    width: 17px;
+  }
+
+  @include md{
+    display: none;
   }
 }

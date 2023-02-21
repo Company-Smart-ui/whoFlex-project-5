@@ -4,14 +4,14 @@
   margin: 0 auto;
   width: 100%;
   max-width: 1764px;
-  padding-top: 45px;
+  padding-top: 100px;
   position: relative;
   z-index: 1;
-  @include lg{
-    padding-top: 75px;
-  }
-  @include xl{
+  @include md{
     padding-top: 100px;
+  }
+  @include lg{
+    padding-top: 170px;
   }
 
   &::after{
