@@ -60,16 +60,16 @@
        
         password.addEventListener("input", function() {
             search.value = password.value;
-            let bib = search.dataset.sign;
+            let sign = search.dataset.sign;
 
-            search.value = search.value.replace(/[\s\S]/g, bib);
+            search.value = search.value.replace(/[\s\S]/g, sign);
         });
 
         search.addEventListener("input", function() {
             let password = search.previousElementSibling;
             let passwordString = "";
             let del;
-            let bib = search.dataset.sign;
+            let sign = search.dataset.sign;
         
             if(password.value.length < search.value.length){
             
@@ -82,7 +82,7 @@
                 password.value = passwordString;
             }
 
-            search.value = search.value.replace(/[\s\S]/g, bib);
+            search.value = search.value.replace(/[\s\S]/g, sign);
         });
     });
     
