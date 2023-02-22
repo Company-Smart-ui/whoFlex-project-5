@@ -345,9 +345,6 @@ function openSearchMobile() {
 
 
 
-
-
-
 @@include('components/openMenu.js');
 @@include('components/swiper-min.js');
 @@include('components/slider-init.js');
