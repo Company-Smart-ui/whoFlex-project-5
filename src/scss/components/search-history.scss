@@ -10,8 +10,7 @@
 
   height: 0;
   opacity: 0;
-  @include md{
-    top: 270px;
+  @include sm{
     left: 0;
     right: 0;
     margin: auto;
@@ -33,6 +32,9 @@
     max-height: calc(100vh - 50px);
     opacity: 1;
     height: auto;
+    @include sm{
+      transform: translateY(-5%);
+    }
     @include md{
       background: #fff;
       transform: translateY(0);
@@ -56,6 +58,9 @@
       font-size: 18px;
       line-height: 22px;
     }
+  }
+  &.transform {
+    transform: translateY(37%);
   }
   &__list{
     color: #666666;
@@ -105,7 +110,7 @@
     @media screen and (max-width: 767px) {
       box-shadow: 0 0 9px -2px rgba(0, 0, 0, 0.17);
       border-radius: 4px;
-      margin: 30px 17px;
+      margin: 26px 17px;
       background: #Fff;
     }
     @include md{
@@ -142,7 +147,7 @@
       }
       &:hover{
         background-color: #fff;
-        border: 2px solid gray;
+        border: 1px solid gray;
         color: gray;
       }
     }
@@ -221,7 +226,7 @@
     width: 17px;
   }
 
-  @include md{
+  @include sm{
     display: none;
   }
 }

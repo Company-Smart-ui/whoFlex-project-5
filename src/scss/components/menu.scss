@@ -231,7 +231,7 @@ body{
   }
   &.hide{
     @media screen and (max-width: 767px) {
-      height: 64px;
+      align-items: center;
       box-shadow: none;
     }
   }
@@ -366,26 +366,29 @@ body{
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   @include sm{
     padding: 15px;
   }
-  @include l{
-    align-items: center;
-}
 }
 
 .search_box {
   display: none;
   position: relative;
   @include sm{
-    max-width: 365px;
-  }
-  @include md{
     display: block;
+    max-width: 365px;
+    width: 100%;
     margin: auto;
   }
   &_desk{
+    
+    @include sm{
+      max-width: 105px;
+    }
+    @include sm{
+      max-width: 365px;
+    }
     @include l{
       margin-left: 0;
       margin-right: auto;
@@ -418,14 +421,15 @@ body{
     border: 1px solid #dddddd;
   }
 
-  @include md {
+  @include sm {
     width: 100%;
     margin: 25px auto auto;
     &_white{
       background: rgba(255, 255, 255, 0.22);
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.13);
       border: none;
-      width: 365px;
+      max-width: 365px;
+      width: 100%;
       margin: 0;
     }
   }
@@ -451,6 +455,10 @@ body{
 
 .wrap-top-menu{
   display: flex;
+  
+  @include sm{
+    width: 76%;
+  }
   @include l{
     width: calc(100% - 265px);
   }
@@ -463,10 +471,13 @@ body{
     margin-right: 0;
   }
   button{
-    margin-left: 22px;
+    margin-left: 14px;
     font-size: 12px;
     letter-spacing: -0.02em;
     color: #333333;
+    @include sm{
+      margin-left: 22px;
+    }
   }
 }
 .notification-btn{
