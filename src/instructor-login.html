@@ -32,7 +32,8 @@
                         </div>
                         <div class="form__group">
                             <label class="form__label" for="instrLoginPassword">Password</label>
-                            <input class="form__input pass-word" type="password" id="instrLoginPassword" required>
+                            <input class="password_hide_input form__input pass-word" type="password" style="display: none;"  required>
+                            <input type="text" class="password-wrap form__input pass-word" id="instrLoginPassword"  data-sign="✱">
                             <span class="showPass">Show</span>
                         </div>
                         <button class="button button__second" type="submit">SIGN IN</button>
@@ -48,6 +49,80 @@
 <footer></footer>
 
 <script src="js/script.js"></script>
+
+<script>
+    function Mask() {
+    let bob = document.querySelectorAll(".password-wrap");
+    
+    bob.forEach(search => {
+
+        let password = search.previousElementSibling;
+       
+        password.addEventListener("input", function() {
+            search.value = password.value;
+            let sign = search.dataset.sign;
+
+            search.value = search.value.replace(/[\s\S]/g, sign);
+        });
+
+        search.addEventListener("input", function() {
+            let password = search.previousElementSibling;
+            let passwordString = "";
+            let del;
+            let sign = search.dataset.sign;
+        
+            if(password.value.length < search.value.length){
+            
+                password.value = password.value + search.value[search.value.length - 1];
+                passwordString = password.value;
+            } else{
+                del = password.value.length - search.value.length;
+                passwordString = password.value;
+                passwordString = passwordString.substring(0, String(passwordString).length - (del));
+                password.value = passwordString;
+            }
+
+            search.value = search.value.replace(/[\s\S]/g, sign);
+        });
+    });
+    
+}Mask();
+
+
+function showPass() {
+    const showPass = document.querySelectorAll(".showPass");
+    showPass.forEach(item => {
+        item.classList.add('d-none');
+        const wrapPa = item.closest('.form__group');
+        const input = wrapPa.querySelector('.password-wrap');
+
+        input.addEventListener('keyup', function(){
+            if(input.value.length > 0){
+                item.classList.remove('d-none');
+            }else{
+                item.classList.add('d-none');
+            }
+        })
+        item.addEventListener('click', function(){
+            let sub = input.previousElementSibling;
+            if (sub.type === "text") {
+                sub.type = "text";
+                item.innerHTML = "Hide";
+                sub.style.display = "block";
+                input.style.display = "none";
+            } else {
+                sub.type = "password";
+                sub.style.display = "none";
+                input.style.display = "block";
+                item.innerHTML = "Show";
+            }
+            input.focus();
+            input.selectionStart = input.value.length;
+        })
+    })
+};
+showPass();
+</script>
 </body>
 
 </html>

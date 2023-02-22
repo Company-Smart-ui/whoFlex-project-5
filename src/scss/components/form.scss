@@ -150,5 +150,13 @@
   }
 }
 
+.password-wrap {
+  font-size: 12px !important;
+
+  @include md{
+    font-size: 7px !important;
+  }
+}
+
 @import "./inst-login";
 @import "./forgot-pass";
