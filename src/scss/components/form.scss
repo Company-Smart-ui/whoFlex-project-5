@@ -107,12 +107,18 @@
     height: 47px;
     padding: 0 15px;
     letter-spacing: 3px;
-    font-size: 17px;
+    font-size: 0px!important;
+    -webkit-text-security: disc;
+    -moz-webkit-text-security: disc;
+    -moz-text-security: disc;
     &[type=password]{
-      font-size: 12px !important;
+      -webkit-text-security: disc;
+      -moz-webkit-text-security: disc;
+      -moz-text-security: disc;
+      font-size: 15px !important;
 
       @include md{
-        font-size: 7px !important;
+        font-size: 15px !important;
       }
     }
     @include md{
