@@ -151,7 +151,11 @@
 }
 
 .password-wrap {
-  font-size: 18px !important;
+  font-size: 14px !important;
+
+  @include md{
+    font-size: 18px !important;
+  }
 }
 
 @import "./inst-login";
