@@ -7,7 +7,6 @@
     @include sm{
       background: transparent;
       min-height: auto;
-      position: absolute;
       align-items: center;
       justify-content: center;
       height: 100%;
@@ -79,9 +78,9 @@
     margin: 0 auto;
     background: #FFFFFF;
     border-radius: 10px;
-    padding: 140px 16px;
+    padding: 100px 16px;
     @include sm{
-      margin: 128px auto;
+      margin: 170px auto;
       padding: 30px 34px;
     }
   }

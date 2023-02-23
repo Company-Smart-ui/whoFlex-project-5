@@ -34,7 +34,7 @@ navItem.forEach(item =>{
 function toggleMenu(){
     headerNav.classList.toggle('open');
     openMenu.classList.toggle('open');
-    searchHistoryCard.classList.add('transform');
+    searchHistoryCard.classList.toggle('transform');
     closeSearchMobile();
 }
 
@@ -43,6 +43,9 @@ function toggleSearchMobile() {
         if(searchBtnIcon.classList.contains('active')) {
             closeSearchMobile();
         } else {
+            if(openMenu.classList.contains('open')) {
+                toggleMenu();
+            }
             openSearchMobile();
         }
     });

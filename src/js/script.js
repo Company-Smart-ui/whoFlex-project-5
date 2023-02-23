@@ -331,20 +331,6 @@ function createSearchHistory(searchInput){
 }());
 
 
-function openSearchMobile() {
-    const searchBtnIcon = document.querySelector('.search_icon_mobile');
-    const searchBlock = document.querySelector('.search_box');
-    const searchHistoryCard = document.querySelector('.search-history');
-    
-    searchBtnIcon.addEventListener("click", function() {
-        this.classList.toggle('active');
-        searchBlock.classList.toggle('active');
-        searchHistoryCard.classList.toggle('active');
-    });
-} openSearchMobile();
-
-
-
 @@include('components/openMenu.js');
 @@include('components/swiper-min.js');
 @@include('components/slider-init.js');
