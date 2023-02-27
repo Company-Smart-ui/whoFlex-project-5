@@ -115,6 +115,10 @@
         font-size: 7px !important;
       }
     }
+    &[type=email]{
+      letter-spacing: normal;
+      font-size: 15px;
+    }
     @include md{
       height: 40px;
     }

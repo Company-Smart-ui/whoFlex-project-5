@@ -208,4 +208,12 @@ input:-webkit-autofill:active{
     display: flex;
     align-items: center;
     justify-content: center;
+
+	@include md{
+		display: none;
+	}
+
+	&.active {
+		display: none;
+	}
 }

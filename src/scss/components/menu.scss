@@ -466,18 +466,12 @@ body{
 .wrapper-btns{
   display: flex;
   align-items: center;
-  margin-right: 65px;
-  @include l{
-    margin-right: 0;
-  }
+
   button{
-    margin-left: 14px;
     font-size: 12px;
     letter-spacing: -0.02em;
     color: #333333;
-    @include sm{
-      margin-left: 22px;
-    }
+    margin-left: 22px;
   }
 }
 .notification-btn{
@@ -574,17 +568,17 @@ body{
   .new-card{
     position: absolute;
     content: "";
-    top: 0;
-    right: -3px;
-    font-size: 6px;
+    top: -6px;
+    right: -6px;
+    font-size: 8px;
     line-height: 90%;
     font-weight: 700;
-    letter-spacing: 0.01em;
-    color: #ffffff;
-    background-color: $secondAccent;
+    letter-spacing: .01em;
+    color: #fff;
+    background-color: #ddc160;
     border-radius: 50%;
-    width: 8.5px;
-    height: 8.5px;
+    width: 10.5px;
+    height: 10.5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -593,8 +587,8 @@ body{
       height: 18px;
       font-weight: 400;
       font-size: 13px;
-      top: -4px;
-      right: -6px;
+      top: -3px;
+      right: -7px;
     }
   }
 }

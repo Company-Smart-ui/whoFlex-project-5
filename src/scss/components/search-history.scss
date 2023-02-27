@@ -138,8 +138,7 @@
       font-size: 14px;
       line-height: 16px;
       @include sm{
-        border: 2px solid #E0C463;
-        padding: 10px 23px;
+        padding: 7px 23px;
       }
       @include md{
         font-size: 17px;
@@ -181,13 +180,13 @@
 .search_box_desk.active{
   @media screen and (max-width: 767px) {
     display: block;
-    height: 64px;
+    height: 76px;
     background: #fff;
     position: absolute;
     width: 100%;
     z-index: 5;
     left: 0;
-    top: 57px;
+    top: 48px;
     .common_input_white{
      
       &::placeholder{
@@ -210,11 +209,12 @@
 .nav_wrap {
   align-items: center;
   display: flex;
+  margin-bottom: -6px;
 }
 
 .search_icon_mobile {
   width: 32px;
-  margin-left: 20px;
+  margin-left: 10px;
   height: 32px;
   border-radius: 50%;
 

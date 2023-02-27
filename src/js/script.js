@@ -331,6 +331,31 @@ function createSearchHistory(searchInput){
 }());
 
 
+function hideMenuFlying() {
+    const inputAll = document.querySelectorAll('input');
+    const menuFlying = document.querySelector('.btn_menu_flying');
+
+    inputAll.forEach(input =>{
+        input.addEventListener("focus", function() {
+            menuFlying.style.display = "none";
+        });
+        input.addEventListener("blur", function() {
+            menuFlying.style.display = "block";
+        });
+    });
+}hideMenuFlying();
+
+function moveBurger() {
+    if(window.screen.width < 1024) {
+        const burger = document.querySelector('.hamburger-lines');
+        const wrapBtn = document.querySelector('.wrapper-btns'); 
+
+        wrapBtn.append(burger);
+    }
+} moveBurger();
+
+
+
 @@include('components/openMenu.js');
 @@include('components/swiper-min.js');
 @@include('components/slider-init.js');
