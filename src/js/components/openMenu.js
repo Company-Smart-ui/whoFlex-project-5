@@ -62,3 +62,10 @@ function closeSearchMobile(){
     searchBlock.classList.remove('active');
     searchHistoryCard.classList.remove('active');
 };
+
+function openUseProfile() {
+    const useBtn = document.querySelector('.user-btn');
+    useBtn.addEventListener("click", function() {
+        useBtn.nextElementSibling.classList.toggle('active');
+    });
+}openUseProfile();
