@@ -346,12 +346,17 @@ function hideMenuFlying() {
 }hideMenuFlying();
 
 function moveBurger() {
-    if(window.screen.width < 1024) {
-        const burger = document.querySelector('.hamburger-lines');
-        const wrapBtn = document.querySelector('.wrapper-btns'); 
+    const burger = document.querySelector('.hamburger-lines');
+    const wrapBtn = document.querySelector('.wrapper-btns'); 
+    const logoBlock = document.querySelector('.nav_wrap'); 
 
-        wrapBtn.append(burger);
-    }
+    window.addEventListener('resize', function() {
+        if(window.innerWidth < 1024) {
+            wrapBtn.append(burger);
+        } else {
+            logoBlock.after(burger);
+        }
+    }); 
 } moveBurger();
 
 
