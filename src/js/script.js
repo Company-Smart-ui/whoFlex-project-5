@@ -349,12 +349,16 @@ function moveBurger() {
     const logoBlock = document.querySelector('.nav_wrap'); 
 
     window.addEventListener('resize', function() {
+        toggleBurger();
+    }); 
+
+    function toggleBurger() {
         if(window.innerWidth < 1024) {
             wrapBtn.append(burger);
         } else {
             logoBlock.after(burger);
         }
-    }); 
+    }toggleBurger();
 } moveBurger();
 
 
