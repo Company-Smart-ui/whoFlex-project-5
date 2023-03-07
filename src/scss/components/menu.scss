@@ -468,7 +468,7 @@ body{
   align-items: center;
 
   button{
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: -0.02em;
     color: #333333;
     margin-left: 22px;
@@ -537,6 +537,9 @@ body{
     }
   }
 }
+.pencil:hover {
+  filter: contrast(0);
+}
 .classroom-btn{
   display: none;
   @include l{
@@ -549,14 +552,11 @@ body{
 .card-btn{
   position: relative;
   svg{
-    width: 20.5px;
-    height: 20.5px;
+    width: 25px;
+    height: 25px;
     @include sm{
       width: auto;
       height: auto;
-    }
-    @include l{
-      margin-bottom: 5px;
     }
   }
   span{
@@ -588,7 +588,7 @@ body{
       font-weight: 400;
       font-size: 13px;
       top: -3px;
-      right: -7px;
+      right: -12px;
     }
   }
 }
